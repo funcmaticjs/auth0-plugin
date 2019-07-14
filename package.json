@@ -1,7 +1,7 @@
 {
   "name": "@funcmaticjs/auth0-plugin",
-  "version": "0.0.1",
-  "description": "Verifies an Auth0 JWT token",
+  "version": "0.0.2",
+  "description": "Verifies an Auth0 JWT token in the 'Authorization' header and puts the decoded token in 'ctx.state.auth'",
   "main": "index.js",
   "scripts": {
     "test": "jest"

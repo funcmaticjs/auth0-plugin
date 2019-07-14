@@ -89,6 +89,16 @@ describe('Skip Authentication', () => {
       }
     })
   })
+  it ('should just noop if ctx.state.auth is already defined', async () => {
+    ctx.state.auth = { success: true, decoded: { hello: "world" } } 
+    await plugin.request(ctx, NOOP)
+    expect(ctx.state.auth).toMatchObject({
+      success: true,
+      decoded: {
+        hello: "world"
+      }
+    })
+  })
 })
 
 describe('Valid Authentication', () => {
